@@ -1,0 +1,150 @@
+ * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+        
+        body {
+            background-color: #f5f5f5;
+            color: #333;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        .header {
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 30px;
+            align-items: center;
+        }
+        
+        .logo-container {
+            height: 80px;
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        
+        .logo-placeholder {
+            width: 150px;
+            height: 60px;
+            background-color: #FFD700; /* Yolk yellow */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #333;
+            font-weight: bold;
+            border-radius: 4px;
+            box-shadow: 0 0 5px rgba(95, 92, 76, 0.5);
+        }
+        
+        .search-container {
+            position: relative;
+            width: 100%;
+            max-width: 600px;
+        }
+        
+        .search-input {
+            width: 100%;
+            padding: 12px 20px 12px 45px;
+            border: 2px solid #ddd;
+            border-radius: 30px;
+            font-size: 16px;
+            outline: none;
+            transition: all 0.3s;
+        }
+        
+        .search-input:focus {
+            border-color: #FFD700;
+            box-shadow: 0 0 5px rgba(255, 215, 0, 0.5);
+        }
+        
+        .search-icon {
+            position: absolute;
+            left: 15px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: #777;
+        }
+        
+        .content-section {
+            display: flex;
+            gap: 30px;
+        }
+        
+        .section {
+            flex: 1;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+        }
+        
+        .section-title {
+            font-size: 22px;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #FFD700;
+            color: #333;
+        }
+        
+        .results-container {
+            min-height: 300px;
+            padding: 1em;
+            transition: all 0.3s ease-in-out; /* This enables smooth transition */
+            border-radius: 6px;
+            background-color: #fafafa;
+        }
+
+
+        
+        @media (max-width: 768px) {
+            .content-section {
+                flex-direction: column;
+            }
+        }
+
+        #movieVoteCountDisplay, #bookVoteCountDisplay {
+            color: black !important;
+            display: inline !important;
+            opacity: 1 !important;
+            visibility: visible !important;
+            font-size: 1.5em !important;
+        }
+
+        .blink-green {
+            animation: blink-green 0.5s;
+        }
+        @keyframes blink-green {
+            0% { box-shadow: 0 0 12px #10b981; border: 2px solid #10b981; }
+            100% { box-shadow: none; border: none; }
+        }
+        
+        .blink-red {
+            animation: blink-red 0.5s;
+        }
+        @keyframes blink-red {
+            0% { box-shadow: 0 0 12px #ef4444; border: 2px solid #ef4444; }
+            100% { box-shadow: none; border: none; }
+        }
+
+        .nav-buttons {
+            display: flex;
+            gap: 10px;
+            align-items: center;
+            margin-top: 25px;
+        }
+
+        .nav-buttons a img {
+            transition: transform 0.2s ease;
+        }
+
+        .nav-buttons a:hover img {
+            transform: scale(1.05);
+        }
+        
